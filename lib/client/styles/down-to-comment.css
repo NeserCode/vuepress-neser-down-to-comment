@@ -1,0 +1,33 @@
+.down-to-comment {
+	cursor: pointer;
+	position: fixed;
+	bottom: 2rem;
+	right: 2.5rem;
+	width: 2rem;
+	height: 1.2rem;
+	z-index: var(--down-to-comment-z-index);
+}
+
+.down-to-comment__inner {
+	mask: url("down-to-comment.svg") no-repeat;
+}
+
+.down-to-comment:hover {
+	background-color: var(--down-to-comment-color-hover);
+}
+
+@media (max-width: 959px) {
+	.down-to-comment {
+		display: none;
+	}
+}
+
+.down-to-comment-enter-active,
+.down-to-comment-leave-active {
+	transition: opacity 0.3s;
+}
+
+.down-to-comment-enter-from,
+.down-to-comment-leave-to {
+	opacity: 0;
+}
